@@ -21,7 +21,7 @@ func testFactory() string {
 }
 
 func doTask() string {
-	newCombo, err := abstract_factory.GetWinterCombo("summeer")
+	newCombo, err := abstract_factory.GetWinterCombo("winter")
 	if err != nil {
 		return err.Error()
 	}

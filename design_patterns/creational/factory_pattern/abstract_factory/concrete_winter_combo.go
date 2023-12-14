@@ -1,20 +1,18 @@
 package abstract_factory
 
-import "fmt"
-
-type IwinterCombo interface {
-	GetShoe()
-	GetShort()
+type ConcreteWinterCombo struct {
+	//product map[string]interface{}
+	shoe  Shoe
+	short Short
 }
 
-type ConcreteWinterCombo struct{}
-
-func (c ConcreteWinterCombo) GetShoe() {
+func (c ConcreteWinterCombo) GetShoe() Shoe {
 	//TODO implement me
-	fmt.Println("Giày cao cổ for mùa pđông ")
+	panic("implement me")
+	return c.shoe
 }
 
-func (c ConcreteWinterCombo) GetShort() {
+func (c ConcreteWinterCombo) GetShort() Short {
 	//TODO implement me
-	fmt.Println("tat cao tren dau gau")
+	return c.short
 }
