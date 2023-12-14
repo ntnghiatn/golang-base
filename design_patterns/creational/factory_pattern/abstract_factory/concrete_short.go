@@ -1,4 +1,4 @@
-package product
+package abstract_factory
 
 type IShort interface {
 	setLogo(logo string)
@@ -11,6 +11,7 @@ type ConcreteShort struct {
 	short Short
 }
 
+// NewShort - Factory method
 func NewShort() IProduct {
 	return &ConcreteShort{
 		short: Short{},

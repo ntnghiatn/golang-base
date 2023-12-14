@@ -1,4 +1,4 @@
-package product
+package abstract_factory
 
 type Short struct{}
 

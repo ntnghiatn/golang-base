@@ -1,4 +1,4 @@
-package product
+package abstract_factory
 
 type IShoe interface {
 	setLogo(logo string)
@@ -12,7 +12,8 @@ type Concrete struct {
 }
 
 func NewShoe() IProduct {
-	return &Concrete{
-		shoe: Shoe{},
+
+	return Concrete{
+		shoe: Shoe{"ciquan", 0},
 	}
 }
