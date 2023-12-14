@@ -13,4 +13,7 @@ cách tạo chi tiết như thế nào thì thằng factory không biết, facto
 
 ### Để không vi phạm nguyên tắc solid -> 
 - [ ] làm cách nào đó khi tạo factory mới mà không ảnh hưởng đến code cũ (không can thiệp hay sửa code cũ)
-- 
+- [ ] Tách biệt phần khởi ta với phần sử dụng.
+  - [ ] Đơn giản nhất tạo 1 object ở 1 nên mà khác với nơi sử dụng.
+  - [ ] Ở nên bạn sử dụng đối tượng không cần quan tâm chi tiết hoạt động của object cũng không cần biết các object tạo 
+  - như thế nào
