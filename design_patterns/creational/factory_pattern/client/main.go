@@ -8,26 +8,31 @@ import (
 
 func main() {
 
-	log.Println(testFactory())
+	//log.Println(testFactory())
 	log.Println(doTask())
 
 }
 
 func testFactory() string {
 	// using factory to init product
-	newShoe := abstract_factory.NewShoe()
+	newShoe := abstract_factory.NewConcreteShoe()
 	r := fmt.Sprintf("Logoname: %v and size: %d", newShoe.GetLogo(), newShoe.GetSize())
 	return r
 }
 
 func doTask() string {
-	newCombo, err := abstract_factory.GetWinterCombo("summeer")
+	newCombo, err := abstract_factory.GetWinterCombo("winter")
 	if err != nil {
 		return err.Error()
 	}
 
 	//
-	newCombo.GetShoe()
-	newCombo.GetShort()
+	fmt.Printf(
+		"newCombo.GetShoe.GetLogo \"%v\" and Short:: %v",
+		newCombo.GetShoe().GetLogo(),
+		newCombo.GetShort(),
+	)
+
+	//newCombo.GetShort()
 	return "Done!"
 }

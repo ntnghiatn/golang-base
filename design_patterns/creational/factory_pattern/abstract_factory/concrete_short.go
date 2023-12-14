@@ -11,9 +11,28 @@ type ConcreteShort struct {
 	short Short
 }
 
-// NewShort - Factory method
-func NewShort() IProduct {
+// NewConcreteShort - Factory method
+func NewConcreteShort() IProduct {
 	return &ConcreteShort{
-		short: Short{},
+		short: Short{"nameShort", 0},
 	}
+}
+func (c *ConcreteShort) setLogo(logo string) {
+	//TODO implement me
+	panic("implement me")
+}
+
+func (c *ConcreteShort) setSize(size int) {
+	//TODO implement me
+	panic("implement me")
+}
+
+func (c *ConcreteShort) GetLogo() string {
+	//TODO implement me
+	panic("implement me")
+}
+
+func (c *ConcreteShort) GetSize() int {
+	//TODO implement me
+	panic("implement me")
 }

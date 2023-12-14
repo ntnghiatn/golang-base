@@ -1,26 +1,14 @@
 package abstract_factory
 
-type Shoe struct {
+type shoe struct {
 	logo string
 	size int
 }
 
-func (c Concrete) setLogo(logo string) {
-	//TODO implement me
-	panic("implement set logo")
+func (s shoe) GetLogo() string {
+	return s.logo
 }
 
-func (c Concrete) setSize(size int) {
-	//TODO implement me
-	panic("implement set size")
-}
-
-func (c Concrete) GetLogo() string {
-	//TODO implement me
-	return c.shoe.logo
-}
-
-func (c Concrete) GetSize() int {
-	//TODO implement me
-	return c.shoe.size
+func (s shoe) GetSize() int {
+	return s.size
 }
