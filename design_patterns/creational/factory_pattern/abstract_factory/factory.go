@@ -2,21 +2,13 @@ package abstract_factory
 
 import "errors"
 
-type ICombo interface {
-	// define tat cac cac phuong thuc chung cho tat ca cac Factory
-
-	GetShoe() shoe
-	GetShort() Short
-	//ISummerCombo
-}
-
 // GetWinterCombo - abstract facetory la day
-func GetWinterCombo(season string) (ICombo, error) {
-	if season == "winter" {
-		return NewWinterCombo(), nil
+func GetWinterCombo(seasion string) (IwinterCombo, error) {
+	if seasion == "winter" {
+		return ConcreteWinterCombo{}, nil
 	}
 
-	if season == "summer" {
+	if seasion == "summer" {
 		return ConcreteSummerCombo{}, nil
 	}
 
