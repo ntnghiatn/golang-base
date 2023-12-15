@@ -13,13 +13,6 @@ func main() {
 
 }
 
-func testFactory() string {
-	// using factory to init product
-	newShoe := abstract_factory.NewConcreteShoe()
-	r := fmt.Sprintf("Logoname: %v and size: %d", newShoe.GetLogo(), newShoe.GetSize())
-	return r
-}
-
 func doTask() string {
 	newCombo, err := abstract_factory.GetWinterCombo("winter")
 	if err != nil {
@@ -35,4 +28,11 @@ func doTask() string {
 
 	//newCombo.GetShort()
 	return "Done!"
+}
+
+func testFactory() string {
+	// using factory to init product
+	newShoe := abstract_factory.NewConcreteShoe()
+	r := fmt.Sprintf("Logoname: %v and size: %d", newShoe.GetLogo(), newShoe.GetSize())
+	return r
 }

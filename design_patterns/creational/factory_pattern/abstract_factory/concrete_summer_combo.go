@@ -1,17 +1,20 @@
 package abstract_factory
 
-import "fmt"
+type ConcreteSummerCombo struct {
+	shoe  shoe
+	short Short
+}
 
-type ConcreteSummerCombo struct{}
-
+func NewSummerCombo() ICombo {
+	return ConcreteSummerCombo{shoe: shoe{
+		logo: "DEP LAO",
+		size: 22,
+	}, short: Short{name: "Vo Luoi", size: 222}}
+}
 func (c ConcreteSummerCombo) GetShoe() shoe {
-	//TODO implement me
-	fmt.Println("Dep Lao mua he")
-	return shoe{"SSSS", 1}
+	return c.shoe
 }
 
 func (c ConcreteSummerCombo) GetShort() Short {
-	//TODO implement me
-	fmt.Println("Tat luoi cho mat")
-	return Short{}
+	return c.short
 }

@@ -7,7 +7,7 @@ type ConcreteWinterCombo struct {
 }
 
 func NewWinterCombo() ICombo {
-	return &ConcreteWinterCombo{short: Short{name: "DDD", size: 1}, shoe: shoe{logo: "Win Nike", size: 0}}
+	return ConcreteWinterCombo{short: Short{name: "TẤT DÀy mùa đông", size: 1}, shoe: shoe{logo: "Win Nike", size: 0}}
 }
 
 func (c ConcreteWinterCombo) GetShoe() shoe {
